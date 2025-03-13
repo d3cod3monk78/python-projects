@@ -8,4 +8,3 @@ class PDFReport:
 
     def generate(self, flatmate_one, flatmate_two, bill):
         pass
-    
