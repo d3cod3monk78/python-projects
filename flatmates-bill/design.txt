@@ -6,3 +6,12 @@ PDF report stating the names of the flatmates, the period, and how much each had
 Objects:
     Bill:
         amount
+        period
+
+    Flatmate:
+        name
+        days_in_house,
+        pays(bill: Bill)
+    PDFReport:
+        filename
+        generate(flatmate_one: Flatmate, flatmate_two: Flatmate, bill: Bill)
