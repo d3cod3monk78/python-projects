@@ -1,11 +1,13 @@
+from random import randint
 from point import Point
 from rectangle import Rectangle
 
 if __name__ == '__main__':
-    point_one = Point(10, 20)
-    point_two = Point(30, 40)
-    rect_one = Rectangle(low_left=(12, 16), up_right=(17, 19))
-    point_one.show_xy()
-    print(point_one.falls_in_rectangle(rect_one))
-    print(point_one.distance_from_point(point_two))
+    rectangle = Rectangle(Point(randint(0, 9), randint(0, 9)), Point(randint(10, 19), randint(10, 19)))
+    print(f"Rectangle low_left Coordinates-> rectangle low_left_x: {rectangle.low_left.x}, low_left_y: {rectangle.low_left.y}")
+    print(f"Rectangle up_right Coordinates-> rectangle up_right_x: {rectangle.up_right.x}, up_right_y: {rectangle.up_right.y}")
+
+    user_point = Point(float(input("Guess X in point: ")), float(input("Guess Y in point: ")))
+    print(user_point.falls_in_rectangle(rectangle))
+
 
